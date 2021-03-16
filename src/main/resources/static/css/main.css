@@ -1,0 +1,7 @@
+:root {
+    --color-primary: #051747;
+}
+
+header#header {
+    background-color: var(--color-primary);
+}
