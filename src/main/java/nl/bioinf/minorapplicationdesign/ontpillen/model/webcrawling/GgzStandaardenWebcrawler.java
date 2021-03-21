@@ -1,25 +1,27 @@
 package nl.bioinf.minorapplicationdesign.ontpillen.model.webcrawling;
 
+import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.DrugsDao;
 import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.InMemoryDrugDao;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RichtlijnenNhg extends AbstractWebcrawler {
+public class GgzStandaardenWebcrawler extends AbstractWebcrawler {
     List<String> information = new ArrayList<>();
 
-    RichtlijnenNhg(InMemoryDrugDao inMemoryDrugDao) {
-        super(inMemoryDrugDao);
+    GgzStandaardenWebcrawler(DrugsDao drugsDao) {
+        super(drugsDao);
     }
 
     @Override
     public List<String> getInformation() {
-        String description = getDescription();
-        information.add(description);
+        String sideEffects = getSideEffects();
+
+        information.add(sideEffects);
         return information;
     }
 
-    private String getDescription() {
+    private String getSideEffects() {
         return null;
     }
 }

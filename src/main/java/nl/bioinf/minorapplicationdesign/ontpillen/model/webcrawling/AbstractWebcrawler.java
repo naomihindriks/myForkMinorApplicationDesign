@@ -1,17 +1,17 @@
 package nl.bioinf.minorapplicationdesign.ontpillen.model.webcrawling;
 
-import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.InMemoryDrugDao;
+import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.DrugsDao;
 
 import java.util.List;
 
-public abstract class AbstractWebcrawler implements Website{
-    public static InMemoryDrugDao informationStorage;
+public abstract class AbstractWebcrawler{
+    List<String> information = null;
+    public static DrugsDao informationStorage;
 
-    AbstractWebcrawler(InMemoryDrugDao inMemoryDrugDao){
-        informationStorage = inMemoryDrugDao;
+    AbstractWebcrawler(DrugsDao drugsDao){
+        informationStorage = drugsDao;
     }
 
-    @Override
     public abstract List<String> getInformation();
 
 }
