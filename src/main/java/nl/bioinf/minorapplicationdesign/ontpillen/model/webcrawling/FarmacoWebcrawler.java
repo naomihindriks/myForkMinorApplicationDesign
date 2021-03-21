@@ -3,15 +3,14 @@ package nl.bioinf.minorapplicationdesign.ontpillen.model.webcrawling;
 
 import java.util.List;
 import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.Drug;
+import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.DrugsDao;
 import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.DrugsGroup;
-import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.InMemoryDrugDao;
 
-public class Farmaco extends AbstractWebcrawler {
+public class FarmacoWebcrawler extends AbstractWebcrawler {
 
-    Farmaco(InMemoryDrugDao inMemoryDrugDao) {
-        super(inMemoryDrugDao);
+    FarmacoWebcrawler(DrugsDao drugsDao) {
+        super(drugsDao);
     }
-
 
     @Override
     public List<String> getInformation() {
@@ -21,7 +20,7 @@ public class Farmaco extends AbstractWebcrawler {
     }
 
 
-    private String getDrugs(InMemoryDrugDao informationStorage) {
+    private String getDrugs(DrugsDao informationStorage) {
         Drug drug = new DrugsGroup();
         informationStorage.addDrug(null);
         return null;
