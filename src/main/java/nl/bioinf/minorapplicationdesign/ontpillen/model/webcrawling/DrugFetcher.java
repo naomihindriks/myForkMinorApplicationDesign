@@ -3,56 +3,33 @@ package nl.bioinf.minorapplicationdesign.ontpillen.model.webcrawling;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
-import javax.net.ssl.*;
 import java.io.IOException;
-import java.security.GeneralSecurityException;
-import java.security.SecureRandom;
-import java.security.cert.X509Certificate;
+import java.util.HashMap;
 import java.util.List;
 
 public class DrugFetcher {
-    static {
-        TrustManager[] trustAllCertificates = new TrustManager[] {
-                new X509TrustManager() {
-                    @Override
-                    public X509Certificate[] getAcceptedIssuers() {
-                        return null; // Not relevant.
-                    }
-                    @Override
-                    public void checkClientTrusted(X509Certificate[] certs, String authType) {
-                        // Do nothing. Just allow them all.
-                    }
-                    @Override
-                    public void checkServerTrusted(X509Certificate[] certs, String authType) {
-                        // Do nothing. Just allow them all.
-                    }
-                }
-        };
 
-        HostnameVerifier trustAllHostnames = new HostnameVerifier() {
-            @Override
-            public boolean verify(String hostname, SSLSession session) {
-                return true; // Just allow them all.
-            }
-        };
 
-        try {
-            System.setProperty("jsse.enableSNIExtension", "false");
-            SSLContext sc = SSLContext.getInstance("SSL");
-            sc.init(null, trustAllCertificates, new SecureRandom());
-            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
-            HttpsURLConnection.setDefaultHostnameVerifier(trustAllHostnames);
-        }
-        catch (GeneralSecurityException e) {
-            throw new ExceptionInInitializerError(e);
-        }
-    }
-    public static void fetchDrugs() throws IOException {
+    public static void parseDrugs() throws IOException {
+        SSLHelper.bypassSSL();
         String url = "https://www.farmacotherapeutischkompas.nl/bladeren/categorie/psychiatrie";
         Document doc = Jsoup.connect(url).get();
-        String title = doc.title();
-        List<String> medicines = doc.getElementsByClass("icon-medicine pat-inject").eachText();
-
+        Elements groups = doc.getElementsByClass("pat-rich group-2").select("h2");
+        HashMap<String, List<String>> drugGroups = new HashMap<>();
+        HashMap<String, List<String>> medicines = new HashMap<>();
+        for (Element h2Tag : groups
+             ) {
+            Elements subgroups = h2Tag.siblingElements().select("h3");
+            drugGroups.put(h2Tag.text(), subgroups.eachText());
+            for (Element subgroup: subgroups
+                 ) {
+                List<String> drugs = subgroup.siblingElements().select("li").eachText();
+                medicines.put(subgroup.text(), drugs);
+                }
+            }
+        }
     }
-}
+
