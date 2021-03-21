@@ -6,7 +6,7 @@ html, body, #wrapper {
     height: 100%;
 }
 
-header#header {
+nav#header {
     background-color: var(--color-primary);
 }
 
