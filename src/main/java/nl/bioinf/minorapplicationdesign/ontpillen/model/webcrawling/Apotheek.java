@@ -1,9 +1,16 @@
 package nl.bioinf.minorapplicationdesign.ontpillen.model.webcrawling;
 
+import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.InMemoryDrugDao;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Apotheek implements Website {
+public class Apotheek extends AbstractWebcrawler {
+
+    Apotheek(InMemoryDrugDao inMemoryDrugDao) {
+        super(inMemoryDrugDao);
+    }
+
     List<String> information = new ArrayList<>();
 
     @Override

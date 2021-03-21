@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface DrugsDao {
-    Map<Integer, Drug> Drugs = new HashMap();
+
 
     String getDrugByName();
     List<Drug> listDrugs();

@@ -4,5 +4,4 @@ public abstract class Drug {
     int ID;
     String Name;
     Drug parent;
-
 }
