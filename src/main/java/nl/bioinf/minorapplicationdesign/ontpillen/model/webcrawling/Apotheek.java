@@ -1,14 +1,14 @@
 package nl.bioinf.minorapplicationdesign.ontpillen.model.webcrawling;
 
-import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.InMemoryDrugDao;
+import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.DrugsDao;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Apotheek extends AbstractWebcrawler {
 
-    Apotheek(InMemoryDrugDao inMemoryDrugDao) {
-        super(inMemoryDrugDao);
+    Apotheek(DrugsDao drugsDao) {
+        super(drugsDao);
     }
 
     List<String> information = new ArrayList<>();

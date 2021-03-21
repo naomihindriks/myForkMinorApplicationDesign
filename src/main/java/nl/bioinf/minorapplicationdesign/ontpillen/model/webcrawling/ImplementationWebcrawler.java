@@ -1,10 +1,11 @@
 package nl.bioinf.minorapplicationdesign.ontpillen.model.webcrawling;
 
 
+import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.DrugsDao;
 import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.InMemoryDrugDao;
 
 public class ImplementationWebcrawler implements Webcrawler {
-    static InMemoryDrugDao informationStorage = new InMemoryDrugDao();
+    static DrugsDao informationStorage = new InMemoryDrugDao();
 
 
     public static void main(String[] args) {
