@@ -6,12 +6,11 @@ import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.Drug;
 import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.DrugsDao;
 import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.DrugsGroup;
 
-public class Farmaco extends AbstractWebcrawler {
+public class FarmacoWebcrawler extends AbstractWebcrawler {
 
-    Farmaco(DrugsDao drugsDao) {
+    FarmacoWebcrawler(DrugsDao drugsDao) {
         super(drugsDao);
     }
-
 
     @Override
     public List<String> getInformation() {
@@ -19,7 +18,6 @@ public class Farmaco extends AbstractWebcrawler {
         information.add(drugs);
         return information;
     }
-
 
 
     private String getDrugs(DrugsDao informationStorage) {

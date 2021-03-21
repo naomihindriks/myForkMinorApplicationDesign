@@ -6,10 +6,10 @@ import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.InMemoryDrug
 import java.util.ArrayList;
 import java.util.List;
 
-public class GgzStandaarden extends AbstractWebcrawler {
+public class GgzStandaardenWebcrawler extends AbstractWebcrawler {
     List<String> information = new ArrayList<>();
 
-    GgzStandaarden(DrugsDao drugsDao) {
+    GgzStandaardenWebcrawler(DrugsDao drugsDao) {
         super(drugsDao);
     }
 

@@ -5,9 +5,9 @@ import nl.bioinf.minorapplicationdesign.ontpillen.model.MedicineDAO.DrugsDao;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Apotheek extends AbstractWebcrawler {
+public class ApotheekWebcrawler extends AbstractWebcrawler {
 
-    Apotheek(DrugsDao drugsDao) {
+    ApotheekWebcrawler(DrugsDao drugsDao) {
         super(drugsDao);
     }
 
