@@ -1,5 +1,7 @@
 :root {
-    --color-primary: #8A9EA7;
+    --color-primary: rgb(138, 158, 167);
+    --color-secondary: rgb(141, 155, 106);
+    --color-secondary-70: rgba(141, 155, 106, 0.7);
 }
 
 html, body, #wrapper {
@@ -27,4 +29,16 @@ div#gradient {
 div#background-color {
     background-color: #F3F3F3;
     width: 100%;
+}
+
+div#content {
+    width: 100%;
+}
+
+.home-content-col {
+    background-color: var(--color-secondary-70);
+}
+
+.border-radius-18 {
+    border-radius: 18px;
 }

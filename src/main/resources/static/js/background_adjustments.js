@@ -11,6 +11,7 @@ $(document).ready(() => {
         "min-height": "calc(938px - " + $header.outerHeight() + "px)"
     });
 
+    console.log($mainContent.outerHeight() + "px");
     // Set height of the background color (to the same height as the main content)
     $backgroundColor.css({
         "height": $mainContent.outerHeight() + "px"
