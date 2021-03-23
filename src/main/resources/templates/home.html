@@ -7,6 +7,7 @@
     <!--Bootstrap css-->
     <link href="../static/css/bootstrap/bootstrap.min.css" th:href="@{css/bootstrap/bootstrap.min.css}" rel="stylesheet">
 
+    <!--Custom css-->
     <link href="../static/css/main.css" th:href="@{css/main.css}" rel="stylesheet">
     <title>Ontpillen</title>
 </head>
@@ -42,18 +43,29 @@
                 <div class="row align-items-center py-5" id="home-main-content-row">
 
                     <div class="col-12">
-                        <div class="border-radius-18 home-content-col">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl nisi, semper vitae tincidunt ut, accumsan eget diam. Quisque lacus elit, euismod quis odio non, vestibulum commodo ante. Nunc et fringilla enim. Donec ac mi arcu. Aliquam quis lacinia tortor. Aenean imperdiet malesuada neque nec consequat. Nullam maximus leo a malesuada vestibulum. Donec eget consectetur justo. Nullam nibh sapien, malesuada id lacinia ullamcorper, consequat nec arcu. Integer neque tellus, euismod et nisl dapibus, egestas sodales justo. Donec facilisis urna at odio ultrices, sed fringilla nisi euismod. Morbi aliquet eu justo vel convallis. Duis nibh leo, efficitur in est sed, venenatis imperdiet urna. Phasellus egestas malesuada nunc a rhoncus.
+                        <div class="card border-radius-18 home-content-col">
+                            <div class="card-body">
 
-                                Ut erat mi, interdum non lorem ut, consectetur placerat lectus. Suspendisse nec cursus nisi, nec lacinia velit. Quisque sit amet erat lacus. In nunc libero, luctus nec ligula ut, consequat fermentum massa. Sed sagittis, velit at vestibulum malesuada, ante justo dictum nibh, nec efficitur enim mauris aliquam metus. Fusce ornare enim vitae finibus dapibus. Sed a mollis sapien, sollicitudin pharetra sem. Sed semper tellus eget nisi egestas consectetur. Mauris suscipit sem a nisi posuere, vitae tempor diam luctus. Curabitur elit ligula, facilisis a neque non, pharetra imperdiet purus. Vivamus ultrices nulla bibendum imperdiet hendrerit. Proin ultricies vel tellus sed laoreet. Vivamus pellentesque arcu in diam sagittis posuere. Mauris congue aliquet sem, a pellentesque enim.
+                                <ul class="nav fs-4">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Zoeken</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Lijst maken</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Privacy</a>
+                                    </li>
+                                </ul>
 
-                                Proin eget sodales tellus, ac pharetra erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse vitae nisi nec enim tincidunt laoreet quis eu nisl. Integer ex massa, pellentesque a feugiat eget, elementum id ante. Etiam dictum ante sem, non gravida urna vestibulum et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent rutrum augue lacus, a tempus justo molestie nec. Nullam porta in elit ac facilisis. Cras eget ante pharetra, commodo nisl eu, volutpat lacus. Vivamus metus velit, eleifend id hendrerit a, convallis ut orci.
+                                <div class="position-relative card-content">
+                                    <form class="position-absolute top-50 start-50 col-11 col-sm-10 col-md-8 col-lg-6">
+                                        <label for="search-query" class="form-label">Snelzoeken</label>
+                                        <input type="text" class="form-control" id="search-query">
+                                    </form>
+                                </div>
 
-                                Quisque rutrum luctus tempor. Pellentesque posuere sem ut risus molestie, sit amet dignissim dui egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse lobortis sem at sem semper, eget finibus mi cursus. Proin ultricies, urna ac congue ultrices, nulla erat blandit ipsum, in tincidunt tellus ex eget quam. Nunc ac orci malesuada, tincidunt lectus eu, placerat dolor. Cras tempus dignissim neque at malesuada. Praesent lorem lectus, ultrices vitae iaculis tincidunt, facilisis quis diam. Maecenas vel tortor non turpis interdum feugiat. Morbi blandit viverra purus, sed dignissim nisl molestie vel.
-
-                                Integer a turpis imperdiet, vestibulum risus eget, pulvinar sem. Donec a efficitur lectus. Aenean placerat porttitor lectus, eu malesuada elit mattis vel. Aliquam sed nisi non diam iaculis posuere eget non ante. Duis vulputate sem nec urna consectetur, quis mattis urna vehicula. Duis vestibulum porttitor leo, sed tristique ex molestie pharetra. Nulla facilisi. Sed tincidunt sodales orci. Cras hendrerit elit eget justo semper, ac aliquam purus vulputate. Aliquam erat volutpat. Curabitur vel mattis massa. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse mattis, urna quis tristique venenatis, mauris elit lobortis arcu, non condimentum quam tortor eu tortor. Nulla aliquam, elit vitae lacinia tempus, felis eros ornare magna, a hendrerit tortor nibh vitae arcu. Donec magna lorem, ultricies at turpis non, tincidunt convallis nisi.
-                            </p>
+                            </div>
                         </div>
                     </div>
 
@@ -61,17 +73,21 @@
 
                 <div class="row py-5 gx-5">
                     <div class="col-6">
-                        <div class="home-content-col border-radius-18">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl nisi, semper vitae tincidunt ut, accumsan eget diam. Quisque lacus elit, euismod quis odio non, vestibulum commodo ante. Nunc et fringilla enim. Donec ac mi arcu. Aliquam quis lacinia tortor. Aenean imperdiet malesuada neque nec consequat. Nullam maximus leo a malesuada vestibulum. Donec eget consectetur justo. Nullam nibh sapien, malesuada id lacinia ullamcorper, consequat nec arcu. Integer neque tellus, euismod et nisl dapibus, egestas sodales justo. Donec facilisis urna at odio ultrices, sed fringilla nisi euismod. Morbi aliquet eu justo vel convallis. Duis nibh leo, efficitur in est sed, venenatis imperdiet urna. Phasellus egestas malesuada nunc a rhoncus.
-                            </p>
+                        <div class="card home-content-col border-radius-18 p-3">
+                            <div class="card-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl nisi, semper vitae tincidunt ut, accumsan eget diam. Quisque lacus elit, euismod quis odio non, vestibulum commodo ante. Nunc et fringilla enim. Donec ac mi arcu. Aliquam quis lacinia tortor. Aenean imperdiet malesuada neque nec consequat. Nullam maximus leo a malesuada vestibulum. Donec eget consectetur justo. Nullam nibh sapien, malesuada id lacinia ullamcorper, consequat nec arcu. Integer neque tellus, euismod et nisl dapibus, egestas sodales justo. Donec facilisis urna at odio ultrices, sed fringilla nisi euismod. Morbi aliquet eu justo vel convallis. Duis nibh leo, efficitur in est sed, venenatis imperdiet urna. Phasellus egestas malesuada nunc a rhoncus.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="home-content-col border-radius-18">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl nisi, semper vitae tincidunt ut, accumsan eget diam. Quisque lacus elit, euismod quis odio non, vestibulum commodo ante. Nunc et fringilla enim. Donec ac mi arcu. Aliquam quis lacinia tortor. Aenean imperdiet malesuada neque nec consequat. Nullam maximus leo a malesuada vestibulum. Donec eget consectetur justo. Nullam nibh sapien, malesuada id lacinia ullamcorper, consequat nec arcu. Integer neque tellus, euismod et nisl dapibus, egestas sodales justo. Donec facilisis urna at odio ultrices, sed fringilla nisi euismod. Morbi aliquet eu justo vel convallis. Duis nibh leo, efficitur in est sed, venenatis imperdiet urna. Phasellus egestas malesuada nunc a rhoncus.
-                            </p>
+                        <div class="card home-content-col border-radius-18 p-3">
+                            <div class="card-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl nisi, semper vitae tincidunt ut, accumsan eget diam. Quisque lacus elit, euismod quis odio non, vestibulum commodo ante. Nunc et fringilla enim. Donec ac mi arcu. Aliquam quis lacinia tortor. Aenean imperdiet malesuada neque nec consequat. Nullam maximus leo a malesuada vestibulum. Donec eget consectetur justo. Nullam nibh sapien, malesuada id lacinia ullamcorper, consequat nec arcu. Integer neque tellus, euismod et nisl dapibus, egestas sodales justo. Donec facilisis urna at odio ultrices, sed fringilla nisi euismod. Morbi aliquet eu justo vel convallis. Duis nibh leo, efficitur in est sed, venenatis imperdiet urna. Phasellus egestas malesuada nunc a rhoncus.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

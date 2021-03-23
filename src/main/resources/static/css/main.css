@@ -2,6 +2,7 @@
     --color-primary: rgb(138, 158, 167);
     --color-secondary: rgb(141, 155, 106);
     --color-secondary-70: rgba(141, 155, 106, 0.7);
+    --color-dark: rgb(44, 44, 44);
 }
 
 html, body, #wrapper {
@@ -41,4 +42,16 @@ div#content {
 
 .border-radius-18 {
     border-radius: 18px;
+}
+
+#home-main-content-row li.nav-item {
+}
+
+#home-main-content-row a.nav-link {
+    color: var(--color-dark);
+}
+
+#home-main-content-row .card-content form {
+    -ms-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
 }
