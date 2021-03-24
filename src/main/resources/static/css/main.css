@@ -3,6 +3,9 @@
     --color-secondary: rgb(141, 155, 106);
     --color-secondary-70: rgba(141, 155, 106, 0.7);
     --color-dark: rgb(44, 44, 44);
+    --color-gray: rgb(112, 112, 112);
+    --color-accent: rgb(214, 5, 55);
+    --color-accent-dark: rgb(149,3,38);
 }
 
 html, body, #wrapper {
@@ -44,14 +47,34 @@ div#content {
     border-radius: 18px;
 }
 
-#home-main-content-row li.nav-item {
+#home-main-content-row .card-body ul.nav li {
+    border-right: 1px solid var(--color-gray);
 }
 
-#home-main-content-row a.nav-link {
+#home-main-content-row .card-body ul.nav li:last-of-type {
+    border: unset;
+}
+
+#home-main-content-row .card-body ul.nav button {
+    background-color: unset;
+    border: unset;
+    color: var(--color-gray);
+}
+
+#home-main-content-row .card-body ul.nav button.active {
     color: var(--color-dark);
 }
 
-#home-main-content-row .card-content form {
+#home-main-content-row .card-content #search-form {
     -ms-transform: translate(-50%, -100%);
     transform: translate(-50%, -100%);
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+.btn-primary:hover {
+    background-color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
 }
